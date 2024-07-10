@@ -1,3 +1,5 @@
+const keep_alive= require('./keep_alive.js');
+
 const { Client, GatewayIntentBits, PermissionsBitField, ChannelType, EmbedBuilder } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
