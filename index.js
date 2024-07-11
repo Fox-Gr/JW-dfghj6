@@ -9,6 +9,7 @@ const token = process.env.TOKEN;
 const clientId = '1260588659430654013';
 const guildId = '1257769458341253283';
 const bewerbungsChannelID= '1257775318203109457';
+const roleID= '1257769458441781297';
 
 const rest = new REST({ version: '9' }).setToken(token);
 
@@ -75,10 +76,10 @@ client.on('interactionCreate', async interaction => {
 
         // Fragen stellen
         const questions = [
-            "Wie lautet dein Name?",
-            "Wie alt bist du?",
-            "Was ist dein Beruf?",
-            "Warum möchtest du dich bei uns bewerben?"
+            "1. Wie alt möchten Sie im RP sein?",
+            "2. Wann möchten Sie im RP Geburtstag haben?",
+            "3. Wie möchten Sie im RP heißen?",
+            "4. Warum wollen Sie sich bei uns bewerben?"
         ];
 
         const collectedAnswers = {};
@@ -117,6 +118,7 @@ client.on('interactionCreate', async interaction => {
         .setTimestamp()
         .setFooter({ text: `${user.username}`, iconURL: user.displayAvatarURL({ dynamic: true }) });
 
+        await channelB.send(`<@&${roleID}>`);
         const messageSent= await channelB.send({ embeds: [embed] }); 
 
 
