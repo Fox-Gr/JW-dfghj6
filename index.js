@@ -7,7 +7,8 @@ const { Routes } = require('discord-api-types/v9');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 const token = process.env.TOKEN;
 const clientId = '1260588659430654013';
-const guildId = '1260686115443048489';
+const guildId = '1257769458341253283';
+const bewerbungsChannelID= '1257775318203109457';
 
 const rest = new REST({ version: '9' }).setToken(token);
 
@@ -102,7 +103,7 @@ client.on('interactionCreate', async interaction => {
         for (const question in collectedAnswers) {
             await channel.send(`${question} ${collectedAnswers[question]}`);           
         }
-        channelB= await interaction.guild.channels.fetch('1260695054780072090');
+        channelB= await interaction.guild.channels.fetch(bewerbungsChannelID);
 
         const fields = Object.entries(collectedAnswers).map(([question, answer]) => {
             return { name: question, value: answer };
