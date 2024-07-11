@@ -41,6 +41,8 @@ const rest = new REST({ version: '9' }).setToken(token);
 
 client.once('ready', () => {
     console.log('Ready!');
+      client.user.setActivity(`mit Papierkram`);
+
 });
 
 client.on('interactionCreate', async interaction => {
