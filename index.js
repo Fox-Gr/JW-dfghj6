@@ -81,7 +81,13 @@ client.on('interactionCreate', async interaction => {
             "1. Wie alt möchten Sie im RP sein?",
             "2. Wann möchten Sie im RP Geburtstag haben?",
             "3. Wie möchten Sie im RP heißen?",
-            "4. Warum wollen Sie sich bei uns bewerben?"
+            "4. Was ist Crash-RP?",
+            "5. Was ist RP-Flucht?",
+            "6. Wo ist die Safezone?",
+            "7. Ab wann darf man einen Bank Raub begehen?",
+            "8. Wieviele Personen können maximal in einer kriminellen Vereinigung sein?",
+            "9. Von wo muss man die Waffen holen?",
+            "10. Warum möchten Sie zu uns?"
         ];
 
         const collectedAnswers = {};
